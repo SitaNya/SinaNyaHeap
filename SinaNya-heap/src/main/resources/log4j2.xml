@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="io.prometheus.client.log4j2" status="DEBUG">
+
+    <Properties>
+        <Property name="pattern_layout">%d %-5p (%F:%L) - %m%n</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="%highlight{[ %p ] [%-d{yyyy-MM-dd HH:mm:ss}] [ LOGID:%X{logid} ] [%l] %m%n}"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="DEBUG" includeLocation="true">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>
