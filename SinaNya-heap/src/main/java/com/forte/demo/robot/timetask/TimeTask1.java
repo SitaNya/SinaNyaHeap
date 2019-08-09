@@ -25,7 +25,7 @@ import java.util.Map;
  * @author ForteScarlet <[email]ForteScarlet@163.com>
  * @since JDK1.8
  **/
-@CronTask("0 */1 * * * ?")
+@CronTask("0 */10 * * * ?")
 public class TimeTask1 extends BaseTimeJob {
     /**
      * 实现抽象类的方法，此处代表每次定时任务触发的时候，向群号为"123456789"的群发送一个at全体并问好
