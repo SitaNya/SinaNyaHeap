@@ -7,7 +7,8 @@ import com.forte.qqrobot.sender.MsgSender;
 import com.forte.qqrobot.timetask.BaseTimeJob;
 import com.forte.qqrobot.utils.CQCodeUtil;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 这是一个简单的定时任务实例
@@ -32,9 +33,9 @@ public class TimeTask1 extends BaseTimeJob {
     @Override
     public void execute(MsgSender msgSender, CQCodeUtil cqCodeUtil) {
         CQCode cqCodeAtAll = cqCodeUtil.getCQCode_AtAll();
-        ArrayList<String> noHeapBotList = new SelectNoHeapBotList().selectNotHeapBotList();
-        for (String noHeapBotId:noHeapBotList) {
-            msgSender.SENDER.sendGroupMsg("808619122", cqCodeAtAll.toString() + "各位,"+noHeapBotId+"骰娘已超过10分钟未报告心跳连接，请骰主关注。\n如不需要使用心跳检测功能，请于配置文件末端添加heap=false并重启");
+        HashMap<String, Integer> noHeapBotList = new SelectNoHeapBotList().selectNotHeapBotList();
+        for (Map.Entry<String, Integer> mapEntry : noHeapBotList.entrySet()) {
+            msgSender.SENDER.sendGroupMsg("808619122", cqCodeAtAll.toString() + "各位," + mapEntry.getKey() + "骰娘未报告心跳连接，距离上次报告有" + mapEntry.getValue() + "分钟，请骰主关注。\n如不需要使用心跳检测功能，请于配置文件末端添加heap=false并重启");
         }
     }
 }

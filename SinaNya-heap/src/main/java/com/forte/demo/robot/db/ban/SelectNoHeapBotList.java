@@ -5,7 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import static com.forte.demo.robot.db.tools.GetTime.getNowString;
 
@@ -24,8 +24,8 @@ public class SelectNoHeapBotList {
     /**
      * 读取数据库中的骰点历史信息到缓存
      */
-    public ArrayList<String> selectNotHeapBotList() {
-        ArrayList<String> noHeapBotList = new ArrayList<>(50);
+    public HashMap<String, Integer> selectNotHeapBotList() {
+        HashMap<String, Integer> noHeapBotList = new HashMap<String, Integer>(50);
         try (Connection conn = DbUtil.getConnection()) {
             String sql = "select * from heap";
             try (PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -36,9 +36,9 @@ public class SelectNoHeapBotList {
                             Timestamp timestamp = set.getTimestamp("time");
                             int reduce = (int) ((System.currentTimeMillis() - timestamp.getTime()) / 1000 / 60);
                             if (reduce>1){
-                                noHeapBotList.add(botId);
+                                noHeapBotList.put(botId, reduce);
                             } else {
-                                Log.info(String.format("%s于%s,大约%d前准时报告", botId, getNowString(), reduce));
+                                Log.info(String.format("%s于%s,大约%d分钟前准时报告", botId, getNowString(), reduce));
                             }
                         } else {
                             Log.info(String.format("%s被设定为不参与心跳报告，忽略", botId));
