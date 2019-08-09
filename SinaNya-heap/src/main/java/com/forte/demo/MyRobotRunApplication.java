@@ -1,5 +1,7 @@
 package com.forte.demo;
 
+import com.forte.qqrobot.anno.depend.AllBeans;
+import com.forte.qqrobot.anno.depend.Beans;
 import com.forte.qqrobot.beans.messages.result.GroupList;
 import com.forte.qqrobot.beans.types.CacheTypes;
 import com.forte.qqrobot.component.forhttpapi.HttpApp;
@@ -24,6 +26,7 @@ import com.forte.qqrobot.utils.CQCodeUtil;
  * @author ForteScarlet <[email]ForteScarlet@163.com>
  * @since JDK1.8
  **/
+@AllBeans(value = "com.forte.demo.robot.timetask", beans = @Beans(allDepend = true, single = false))
 public class MyRobotRunApplication implements HttpApp {
 
     /**

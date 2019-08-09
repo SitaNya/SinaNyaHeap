@@ -34,22 +34,12 @@ public class Listener {
         return new Listener();
     }
 
-    /**
-     * 群无过滤入口类，用于日志消息的捕捉
-     * 机器人的开启关闭也是在这一层识别的
-     *
-     * @param msgGet      消息实体
-     * @param msgGetTypes 消息来源类型
-     * @param msgSender   发送器
-     * @param msgGroup    群消息对象
-     */
     @Listen(MsgGetTypes.groupMsg)
     @Filter(value = "\\.ignore[ ]*\\d+")
     public void listenerInputIgnore(MsgGet msgGet, MsgGetTypes msgGetTypes, MsgSender msgSender, GroupMsg msgGroup) {
         try {
             String botId = msgGet.getMsg().replaceAll("\\.ignore[ ]*", "").trim();
-        new InsertHeapIgnore().insertHeapIgnore(botId);
-
+            new InsertHeapIgnore().insertHeapIgnore(botId);
             msgSender.SENDER.sendGroupMsg("808619122", "已将" + botId + "加入心跳检测忽略名单");
         }catch (NullPointerException e){
             log.error(e.getMessage(),e);
