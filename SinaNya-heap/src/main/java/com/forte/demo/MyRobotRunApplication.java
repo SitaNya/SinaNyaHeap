@@ -75,14 +75,6 @@ public class MyRobotRunApplication implements HttpApp {
      */
     @Override
     public void after(CQCodeUtil cqCodeUtil, MsgSender sender) {
-        //获取群列表
-        GroupList groupList = sender.GETTER
-                //定义缓存3小时
-                .cache(3, CacheTypes.PLUS_HOURS)
-                .getGroupList();
-
-        //遍历所有的群并打印群的群号
-        groupList.forEach(group -> System.out.println(group.getCode()));
 
     }
 }
