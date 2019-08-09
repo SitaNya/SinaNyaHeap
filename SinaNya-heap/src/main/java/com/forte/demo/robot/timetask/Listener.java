@@ -62,7 +62,6 @@ public class Listener {
     @Listen(MsgGetTypes.groupMsg)
     @Filter(value = "\\.ignore[ ]*show[ ]*")
     public void listenerGetIgnore(MsgGet msgGet, MsgGetTypes msgGetTypes, MsgSender msgSender, GroupMsg msgGroup) {
-        String botId = msgGet.getMsg().replaceAll("\\.ignore[ ]*show[ ]*", "").trim();
         StringBuilder stringBuilder = new StringBuilder()
                 .append("当前心跳检测忽略名单");
         for (String ignorebotId : heapIgnore) {
