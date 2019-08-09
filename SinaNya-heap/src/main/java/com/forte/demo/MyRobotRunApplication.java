@@ -58,7 +58,7 @@ public class MyRobotRunApplication implements HttpApp {
     @Override
     public void before(HttpConfiguration configuration) {
         configuration.setScannerPackage("com.forte.demo.robot.timetask");
-        configuration.setIp("localhost");
+        configuration.setIp("62.234.90.130");
         configuration.setServerPath("/coolq/demo.php");
         configuration.setJavaPort(60079);
         configuration.setServerPort(10004);

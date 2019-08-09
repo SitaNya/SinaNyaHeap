@@ -165,8 +165,8 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1189" />
-    <option name="y" value="117" />
+    <option name="x" value="1081" />
+    <option name="y" value="88" />
     <option name="width" value="2560" />
     <option name="height" value="1417" />
   </component>
@@ -329,7 +329,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565144324055</updated>
       <workItem from="1565144352264" duration="6354000" />
-      <workItem from="1565316968610" duration="2276000" />
+      <workItem from="1565316968610" duration="2590000" />
     </task>
     <task id="LOCAL-00001" summary="增加每6小时自身存活通报">
       <created>1565318906423</created>
@@ -345,14 +345,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565319293734</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加每6小时自身存活通报">
+      <created>1565320163291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565320163292</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8630000" />
+    <option name="totallyTimeSpent" value="8944000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1189" y="117" width="2560" height="1417" extended-state="0" />
+    <frame x="1755" y="87" width="2560" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
