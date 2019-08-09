@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/robot/db/ban/SelectNoHeapBotList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+            <state relative-caret-position="262">
+              <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,8 +199,8 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-15" />
-    <option name="y" value="62" />
+    <option name="x" value="-25" />
+    <option name="y" value="61" />
     <option name="width" value="2560" />
     <option name="height" value="1293" />
   </component>
@@ -390,7 +390,7 @@
       <workItem from="1565316968610" duration="4608000" />
       <workItem from="1565322384557" duration="3838000" />
       <workItem from="1565332340302" duration="1424000" />
-      <workItem from="1565334214299" duration="1079000" />
+      <workItem from="1565334214299" duration="1845000" />
     </task>
     <task id="LOCAL-00001" summary="增加每6小时自身存活通报">
       <created>1565318906423</created>
@@ -539,14 +539,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565334714287</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="增加每6小时自身存活通报">
+      <created>1565335583150</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1565335583150</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17303000" />
+    <option name="totallyTimeSpent" value="18069000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-15" y="62" width="2560" height="1293" extended-state="0" />
+    <frame x="227" y="62" width="2560" height="1293" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
@@ -555,11 +562,11 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2573471" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2573471" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.36386344" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.36386344" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
@@ -780,8 +787,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/robot/db/ban/SelectNoHeapBotList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        <state relative-caret-position="262">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

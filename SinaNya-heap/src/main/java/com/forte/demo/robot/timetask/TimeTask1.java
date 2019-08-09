@@ -34,6 +34,11 @@ public class TimeTask1 extends BaseTimeJob {
      */
     @Override
     public void execute(MsgSender msgSender, CQCodeUtil cqCodeUtil) {
+        try {
+            Thread.sleep(120000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         ArrayList<AlterInfo> noHeapBotList = new SelectNoHeapBotList().selectNotHeapBotList();
         for (AlterInfo alterInfo : noHeapBotList) {
             CQCode cqCodeAt;
