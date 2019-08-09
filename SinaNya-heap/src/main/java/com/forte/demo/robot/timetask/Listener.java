@@ -48,7 +48,12 @@ public class Listener {
     public void listenerInputIgnore(MsgGet msgGet, MsgGetTypes msgGetTypes, MsgSender msgSender, GroupMsg msgGroup) {
         String botId = msgGet.getMsg().replaceAll("\\.ignore[ ]*", "").trim();
         new InsertHeapIgnore().insertHeapIgnore(botId);
-        msgSender.SENDER.sendGroupMsg("808619122", "已将" + botId + "加入心跳检测忽略名单");
+        try {
+            msgSender.SENDER.sendGroupMsg("808619122", "已将" + botId + "加入心跳检测忽略名单");
+        }catch (NullPointerException e){
+            log.error(e.getMessage(),e);
+            log.error(msgGet.getMsg());
+        }
     }
 
     @Listen(MsgGetTypes.groupMsg)
