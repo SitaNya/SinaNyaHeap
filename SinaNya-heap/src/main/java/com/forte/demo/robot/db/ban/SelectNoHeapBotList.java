@@ -35,7 +35,7 @@ public class SelectNoHeapBotList {
                         if (set.getBoolean("enable")) {
                             Timestamp timestamp = set.getTimestamp("time");
                             int reduce = (int) ((System.currentTimeMillis() - timestamp.getTime()) / 1000 / 60);
-                            if (reduce>1){
+                            if (reduce>10){
                                 noHeapBotList.put(botId, reduce);
                             } else {
                                 Log.info(String.format("%s于%s,大约%d分钟前准时报告", botId, getNowString(), reduce));
