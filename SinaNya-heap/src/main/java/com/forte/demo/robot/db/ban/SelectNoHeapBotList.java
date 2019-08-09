@@ -7,6 +7,8 @@ import org.apache.logging.log4j.Logger;
 import java.sql.*;
 import java.util.ArrayList;
 
+import static com.forte.demo.robot.db.tools.GetTime.getNowString;
+
 
 /**
  * @author SitaNya
@@ -34,7 +36,11 @@ public class SelectNoHeapBotList {
                             int reduce = (int) (System.currentTimeMillis() - timestamp.getTime()) / 1000 / 60;
                             if (reduce>60000){
                                 noHeapBotList.add(set.getString("botId"));
+                            } else {
+                                Log.info(set.getString("botId") + "于" + getNowString() + "准时报告");
                             }
+                        } else {
+                            Log.info(set.getString("botId") + "被设定为不参与心跳报告，忽略");
                         }
                     }
                 }
