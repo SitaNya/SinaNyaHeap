@@ -31,16 +31,17 @@ public class SelectNoHeapBotList {
             try (PreparedStatement ps = conn.prepareStatement(sql)) {
                 try (ResultSet set = ps.executeQuery()) {
                     while (set.next()) {
+                        String botId = set.getString("botId");
                         if (set.getBoolean("enable")) {
                             Timestamp timestamp = set.getTimestamp("time");
-                            int reduce = (int) (System.currentTimeMillis() - timestamp.getTime()) / 1000 / 60;
+                            int reduce = (int) ((System.currentTimeMillis() - timestamp.getTime()) / 1000 / 60);
                             if (reduce>60000){
-                                noHeapBotList.add(set.getString("botId"));
+                                noHeapBotList.add(botId);
                             } else {
-                                Log.info(set.getString("botId") + "于" + getNowString() + "准时报告");
+                                Log.info(String.format("%s于%s,大约%d前准时报告", botId, getNowString(), reduce));
                             }
                         } else {
-                            Log.info(set.getString("botId") + "被设定为不参与心跳报告，忽略");
+                            Log.info(String.format("%s被设定为不参与心跳报告，忽略", botId));
                         }
                     }
                 }
