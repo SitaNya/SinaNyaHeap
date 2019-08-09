@@ -1,14 +1,16 @@
 package com.forte.demo.robot.timetask;
 
 import com.forte.demo.robot.db.ban.SelectNoHeapBotList;
+import com.forte.demo.robot.entity.AlterInfo;
 import com.forte.qqrobot.anno.timetask.CronTask;
 import com.forte.qqrobot.beans.cqcode.CQCode;
 import com.forte.qqrobot.sender.MsgSender;
 import com.forte.qqrobot.timetask.BaseTimeJob;
 import com.forte.qqrobot.utils.CQCodeUtil;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * 这是一个简单的定时任务实例
@@ -32,10 +34,10 @@ public class TimeTask1 extends BaseTimeJob {
      */
     @Override
     public void execute(MsgSender msgSender, CQCodeUtil cqCodeUtil) {
-        CQCode cqCodeAtAll = cqCodeUtil.getCQCode_AtAll();
-        HashMap<String, Integer> noHeapBotList = new SelectNoHeapBotList().selectNotHeapBotList();
-        for (Map.Entry<String, Integer> mapEntry : noHeapBotList.entrySet()) {
-            msgSender.SENDER.sendGroupMsg("808619122", cqCodeAtAll.toString() + "各位," + mapEntry.getKey() + "骰娘未报告心跳连接，距离上次报告有" + mapEntry.getValue() + "分钟，请骰主关注。\n如不需要使用心跳检测功能，请于配置文件末端添加heap=false并重启");
+        ArrayList<AlterInfo> noHeapBotList = new SelectNoHeapBotList().selectNotHeapBotList();
+        for (AlterInfo alterInfo : noHeapBotList) {
+            CQCode cqCodeAtAll = cqCodeUtil.getCQCode_At(alterInfo.getMaster());
+            msgSender.SENDER.sendGroupMsg("808619122", cqCodeAtAll.toString() + "\t各位,(" + alterInfo.getBotId() + ")骰娘未报告心跳连接，距离上次报告有" + alterInfo.getReduce() + "分钟，最后一次报告于" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(alterInfo.getLastTime().getTime())) + "请骰主关注。\n如不需要使用心跳检测功能，请于配置文件末端添加heap=false并重启");
         }
     }
 }
