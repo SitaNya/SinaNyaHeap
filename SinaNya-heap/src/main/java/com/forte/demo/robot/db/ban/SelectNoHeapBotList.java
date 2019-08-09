@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import java.sql.*;
 import java.util.HashMap;
 
+import static com.forte.demo.robot.System.heapIgnore;
 import static com.forte.demo.robot.db.tools.GetTime.getNowString;
 
 
@@ -32,6 +33,10 @@ public class SelectNoHeapBotList {
                 try (ResultSet set = ps.executeQuery()) {
                     while (set.next()) {
                         String botId = set.getString("botId");
+                        if (heapIgnore.contains(botId)){
+                            Log.warn(botId+"在忽略列表中");
+                            continue;
+                        }
                         if (set.getBoolean("enable")) {
                             Timestamp timestamp = set.getTimestamp("time");
                             int reduce = (int) ((System.currentTimeMillis() - timestamp.getTime()) / 1000 / 60);
@@ -41,7 +46,7 @@ public class SelectNoHeapBotList {
                                 Log.info(String.format("%s于%s,大约%d分钟前准时报告", botId, getNowString(), reduce));
                             }
                         } else {
-                            Log.info(String.format("%s被设定为不参与心跳报告，忽略", botId));
+                            Log.warn(String.format("%s被设定为不参与心跳报告，忽略", botId));
                         }
                     }
                 }
