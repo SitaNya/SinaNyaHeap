@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95ea941d-973a-49bf-bbd4-cbcdec7d2639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forte/demo/robot/entity/AlterInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/forte/demo/robot/db/ban/SelectNoHeapBotList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forte/demo/robot/db/ban/SelectNoHeapBotList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/forte/demo/robot/timetask/TimeTask1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forte/demo/robot/timetask/TimeTask1.java" afterDir="false" />
-    </list>
+    <list default="true" id="95ea941d-973a-49bf-bbd4-cbcdec7d2639" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,8 +114,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/robot/timetask/TimeTask1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="39" column="174" lean-forward="true" selection-start-line="39" selection-start-column="174" selection-end-line="39" selection-end-column="174" />
+                <state relative-caret-position="349">
+                  <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -144,8 +139,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/MyRobotRunApplication.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+                <state relative-caret-position="391">
+                  <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -226,8 +221,8 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-330" />
-    <option name="y" value="111" />
+    <option name="x" value="-15" />
+    <option name="y" value="62" />
     <option name="width" value="2560" />
     <option name="height" value="1293" />
   </component>
@@ -416,7 +411,7 @@
       <workItem from="1565144352264" duration="6354000" />
       <workItem from="1565316968610" duration="4608000" />
       <workItem from="1565322384557" duration="3838000" />
-      <workItem from="1565332340302" duration="1105000" />
+      <workItem from="1565332340302" duration="1424000" />
     </task>
     <task id="LOCAL-00001" summary="增加每6小时自身存活通报">
       <created>1565318906423</created>
@@ -544,14 +539,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565326919822</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="增加每6小时自身存活通报">
+      <created>1565333719343</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1565333719344</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15905000" />
+    <option name="totallyTimeSpent" value="16224000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="111" width="2560" height="1293" extended-state="0" />
+    <frame x="148" y="62" width="2560" height="1293" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
@@ -560,11 +562,11 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2553614" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2553614" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.36386344" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.36386344" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
@@ -702,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/MyRobotRunApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/robot/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -758,8 +750,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/robot/timetask/Listener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        <state relative-caret-position="425">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -792,8 +784,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/robot/timetask/TimeTask1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="39" column="174" lean-forward="true" selection-start-line="39" selection-start-column="174" selection-end-line="39" selection-end-column="174" />
+        <state relative-caret-position="349">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/forte/demo/MyRobotRunApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

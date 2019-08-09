@@ -45,7 +45,7 @@ public class SelectNoHeapBotList {
                             if (reduce>10){
                                 alterInfo.setBotId(botId);
                                 alterInfo.setLastTime(timestamp);
-                                alterInfo.setMaster(set.getString("master"));
+                                alterInfo.setMaster(set.getString("botMaster"));
                                 alterInfo.setReduce(reduce);
                                 Log.warn(String.format("%s未能准时报告，上一次报告时间为%s", botId, String.valueOf(timestamp)));
                             } else {
