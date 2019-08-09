@@ -48,13 +48,13 @@ public class SelectNoHeapBotList {
                                 alterInfo.setMaster(set.getString("botMaster"));
                                 alterInfo.setReduce(reduce);
                                 Log.warn(String.format("%s未能准时报告，上一次报告时间为%s", botId, String.valueOf(timestamp)));
+                                alterInfos.add(alterInfo);
                             } else {
                                 Log.info(String.format("%s于%s,大约%d分钟前准时报告", botId, getNowString(), reduce));
                             }
                         } else {
                             Log.warn(String.format("%s被设定为不参与心跳报告，忽略", botId));
                         }
-                        alterInfos.add(alterInfo);
                     }
                 }
             }
