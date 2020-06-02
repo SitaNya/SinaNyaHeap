@@ -66,4 +66,16 @@ public class Listener {
         }
         msgSender.SENDER.sendGroupMsg("808619122", stringBuilder.toString());
     }
+
+    @Listen(MsgGetTypes.groupMsg)
+    @Filter(value = "\\.ignore[ ]*show[ ]*")
+    public void listenerRmBanFromShiki(MsgGet msgGet, MsgGetTypes msgGetTypes, MsgSender msgSender, GroupMsg msgGroup) {
+        StringBuilder stringBuilder = new StringBuilder()
+                .append("当前心跳检测忽略名单");
+        for (String ignorebotId : heapIgnore) {
+            stringBuilder.append("\n")
+                    .append(ignorebotId);
+        }
+        msgSender.SENDER.sendGroupMsg("808619122", stringBuilder.toString());
+    }
 }
